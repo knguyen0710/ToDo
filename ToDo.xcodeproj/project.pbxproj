@@ -13,6 +13,8 @@
 		9192096E1D4DB1CD001C5312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9192096D1D4DB1CD001C5312 /* Assets.xcassets */; };
 		919209711D4DB1CD001C5312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9192096F1D4DB1CD001C5312 /* LaunchScreen.storyboard */; };
 		9192097C1D4DB1CD001C5312 /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192097B1D4DB1CD001C5312 /* ToDoTests.swift */; };
+		919209871D4DB38D001C5312 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919209861D4DB38D001C5312 /* ToDoItemTests.swift */; };
+		9192098B1D4DB4D0001C5312 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192098A1D4DB4D0001C5312 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		919209771D4DB1CD001C5312 /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9192097B1D4DB1CD001C5312 /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 		9192097D1D4DB1CD001C5312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		919209861D4DB38D001C5312 /* ToDoItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItemTests.swift; path = ../ToDoItemTests.swift; sourceTree = "<group>"; };
+		9192098A1D4DB4D0001C5312 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		919209651D4DB1CD001C5312 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				9192098C1D4DB58E001C5312 /* Model */,
 				919209661D4DB1CD001C5312 /* AppDelegate.swift */,
 				919209681D4DB1CD001C5312 /* ViewController.swift */,
 				9192096A1D4DB1CD001C5312 /* Main.storyboard */,
@@ -90,10 +95,27 @@
 		9192097A1D4DB1CD001C5312 /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
+				9192098D1D4DB59E001C5312 /* ModelTests */,
 				9192097B1D4DB1CD001C5312 /* ToDoTests.swift */,
 				9192097D1D4DB1CD001C5312 /* Info.plist */,
 			);
 			path = ToDoTests;
+			sourceTree = "<group>";
+		};
+		9192098C1D4DB58E001C5312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9192098A1D4DB4D0001C5312 /* ToDoItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9192098D1D4DB59E001C5312 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				919209861D4DB38D001C5312 /* ToDoItemTests.swift */,
+			);
+			name = ModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +221,7 @@
 			files = (
 				919209691D4DB1CD001C5312 /* ViewController.swift in Sources */,
 				919209671D4DB1CD001C5312 /* AppDelegate.swift in Sources */,
+				9192098B1D4DB4D0001C5312 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919209871D4DB38D001C5312 /* ToDoItemTests.swift in Sources */,
 				9192097C1D4DB1CD001C5312 /* ToDoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

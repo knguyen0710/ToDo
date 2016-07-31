@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kyna Nguyen. All rights reserved.
 //
 
+@testable import ToDo
 import XCTest
 
 class ToDoItemTests: XCTestCase {
@@ -20,16 +21,22 @@ class ToDoItemTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInit_ShouldSetTitle() {
+//    The underscore denotes that the return value does not matter - it is a nonfailable initializer
+//        _ = ToDoItem(title: "Test Title")
+        
+        let item = ToDoItem(title: "Test Title")
+        XCTAssertEqual(item.title, "Test Title", "Initializer should set the itme title")
+    }
+
+    func testInit_ShouldTakeTitleAndDescription() {
+       let item = ToDoItem(title: "Test Title", itemDescription: "Test description")
+        XCTAssertEqual(item.itemDescription, "Test description", "Initializer should set the itme description")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testInit_ShouldSetTitleAndDescriptionAndTimestamp() {
+        let item = ToDoItem(title: "Test title", itemDescription: "Test Description", timestamp: 0.0)
+        
+        XCTAssertEqual(0.0, item.timestamp, "Initializer should set the timestamp")
     }
-    
 }
